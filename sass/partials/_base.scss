@@ -4,8 +4,9 @@
 
 $base-color: #000;
 
+* { @include box-sizing(border-box); }
+
 body {
-	@include box-sizing(border-box);
 	margin: 2em;
 	font-size: 62.5%;
 	color: $base-color;
@@ -46,7 +47,7 @@ header {
 	clear: both;
 	float: left;
 	width: auto;
-	padding: 1.5em 1em;
+	padding: 2em;
 	margin-bottom: 2em;
 	border: 1px solid lighten($base-color, 80%);
 	@include border-radius(4px);
@@ -99,7 +100,7 @@ header {
 	}
 
 	.form-elements {
-		width: 75%;
+		width: 100%;
 
 		fieldset {
 			padding: 1em;
@@ -119,7 +120,8 @@ header {
 		}
 
 		input, textarea {
-			width: 75%;
+			width: 90%;
+			margin-bottom: 1em;
 		}
 
 		input[type="submit"] {
@@ -167,6 +169,16 @@ header {
 	.image {
 		width: 40%;
 		max-width: 275px;
+	}
+}
+
+}
+
+@media only screen and (min-width: 73.125em) {
+
+.tile-wrap {
+	.form-elements {
+		width: 75%;
 	}
 }
 
